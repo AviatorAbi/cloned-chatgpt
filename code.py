@@ -11,7 +11,3 @@ def get_gpt_response(prompt,memory,openai_api_key):
     messages = system_prompt + [{"role": "user", "content": prompt}]
     response = chain.invoke({"input": messages})
     return response["response"]
-
-#memory = ConversationBufferMemory(return_messages = True)
-#print(get_gpt_response("你觉得变形金刚怎么样？", memory, "sk-dL71lZdc85y4BaYiz1WnaJGWO9eoZMkfSz4offKIj0L6laoy"))
-
